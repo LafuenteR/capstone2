@@ -1,5 +1,5 @@
 <?php 
-	// session_start();
+	session_start();
 	// function login(){
 	// 	require 'home.php';
 	if(isset($_POST['login'])){
@@ -18,6 +18,7 @@
  			$_SESSION['username'] = $username;
  			$_SESSION['fullname'] = $fullname;
  			$_SESSION['password'] = $password;
+ 			$_SESSION['id'] = $iddd;
  			header('location:loginhome.php');
  			// $_SESSION['role'] = $role;
 

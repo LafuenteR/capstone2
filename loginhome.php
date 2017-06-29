@@ -5,9 +5,11 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style type="text/css">
     .nav-header-color{
     	/*background: linear-gradient(to bottom, #3399ff 0%, #ccffff 100%);*/
@@ -56,21 +58,44 @@
                 require 'signup.php';
                  echo $_SESSION['username']; ?>
                 </a></li>
-                <li><a href="#">
-                    <?php 
-                    // echo "<form method='POST' action='logout.php'>";
-                    echo "<input type='submit' name='logout' value='Log Out' ";
-                    // echo "</form>";
-                    ?>
-                </a></li>
-                <!-- </form> -->
-                <!-- <li><a href="product.php" id="container-product">Products</a></li> -->
+        
+                <li type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Log Out</li>
+               
             </ul>
          
             </div>
       	</div>  <!-- container-fluid -->
     </nav>
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
 
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Are you sure you want to Log out?</h4>
+          </div>
+          <div class="modal-body">
+            <form method="POST" action="logout.php">
+                <input class="btn btn-danger" type="submit" name="logout" value="Yes">
+                <input class="btn btn-default" type="submit" name="no" value="No">
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 col-sm-2"></div>
+            <div class="col-md-8 col-sm-8">
+                <hr>
+            </div>
+        </div>
+    </div>
 </body>
 <script type="text/javascript">
 	$("#log-in-a").click(function(){

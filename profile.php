@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
  ?>
 <!DOCTYPE html>
 <html>
@@ -74,7 +74,7 @@ session_start();
                 require 'signup.php';
                  echo $_SESSION['username']; ?>
                  </a></li>
-                <li><a type="button" data-toggle="modal" data-target="#myModal">Log Out</a></li>
+                <li type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Log Out</li>
                 <!-- <li><a href="product.php" id="container-product">Products</a></li> -->
             </ul>
             </div>
@@ -82,7 +82,14 @@ session_start();
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col-md-2 col-sm-2"></div>
+            <div class="col-md-2 col-sm-2">
+                 <!-- <button type="button" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-upload"></span> Upload
+                 </button> -->
+                 <form>
+                    <input class="glyphicon glyphicon-upload btn btn-default btn-sm" type="submit" name="submit">
+                 </form>
+            </div>
             <div class="col-md-8 col-sm-8">
                 <div class="col-md-12 col-sm-12">
                     <a href="images/whitewalker.jpg" download="">
@@ -126,31 +133,7 @@ session_start();
             </div>
         </div>
     </div>
-    <div id="myModal" class="modal fade" role="dialog">
-      <div class="modal-dialog modal-sm">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <!-- <h4 class="modal-title">Modal Header</h4> -->
-          </div>
-          <div class="modal-body">
-            <div class="container container-form">
-                <form id="login-id" method="POST" action="">
-                    <div class="form-group">
-                        <input class="btn btn-info" type="submit" name="logout"><br>
-                    </div>
-                </form>
-                </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-
-      </div>
-    </div>
+   
 </body>
 <script type="text/javascript">
 	$("#log-in-a").click(function(){

@@ -59,12 +59,12 @@
 		    			<h3>Sign up to see and download photos legally</h3>
 		    			<hr>
 		    			<form id="sign-up" method="POST" action="signup.php">
-		    				<input class="form-group" type="text" name="fullname" placeholder="Full Name" required><br>
-		    				<input class="form-group" type="text" name="username" placeholder="Username" required><br>
+		    				<input class="form-control" type="text" name="fullname" placeholder="Full Name" required><br>
+		    				<input class="form-control" type="text" name="username" placeholder="Username" required><br>
 		    				<!-- <input class="form-group" type="email" name="email" placeholder="Email" required><br> -->
-		    				<input class="form-group" type="password" name="password" placeholder="Password"><br>
-		    				<input class="form-group" type="password" name="confirm-password" placeholder="Confirm Password"><br>
-		    				<input class="form-group btn btn-info" type="submit" name="signup" value="Sign Up"><br>
+		    				<input class="form-control" type="password" name="password" placeholder="Password"><br>
+		    				<input class="form-control" type="password" name="confirm-password" placeholder="Confirm Password"><br>
+		    				<input class="form-control btn btn-info" type="submit" name="signup" value="Sign Up"><br>
 		    				<h5>By signing up, you agree to our Terms & Privacy Policy.</h5>
 		    			</form>
 	    			</div>
@@ -77,9 +77,9 @@
 		    			<h1>PhotoSharing</h1>
 		    			<hr>
 		    			<form id="log-in" method="POST" action="login.php">
-		    				<input class="form-group" type="text" name="username" placeholder="Username" required><br>
-		    				<input class="form-group" type="password" name="password" placeholder="Password"><br>
-		    				<input class="form-group btn btn-info" type="submit" name="login" value="Log In"><br><br>
+		    				<input class="form-control" type="text" name="username" placeholder="Username" required><br>
+		    				<input class="form-control" type="password" name="password" placeholder="Password"><br>
+		    				<input class="form-control btn btn-info" type="submit" name="login" value="Log In"><br><br>
 		    			</form>
 	    			</div>
 	    			<div id="sign-up-h5" class="sign-log-border container-fluid">
