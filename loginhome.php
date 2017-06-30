@@ -29,16 +29,55 @@
     #log-in-div, #sign-up-h5{
     	display: none;
     }
-    .navbar-collapse .navbar-nav>li>a, .nav-header-color .navbar-header>a{
+ /*    .nav-header-color .navbar-header>a{
     color: black;
     }
-    .navbar-collapse .navbar-nav>li>a:hover, .nav-header-color .navbar-header>a{
+     .nav-header-color .navbar-header>a{
     	color: red;
+    }*/
+    .btn-sm{
+        width: 100%;
+        height: 100%;
     }
-    </style>
+    .foot{
+        padding-left: 0;
+        padding-right: 0;
+        height: 50px;
+    }
+    .container-fix-footer{
+        margin-left: 55px;
+        margin-right: 55px;
+    }
+     .navbar-collapse .navbar-nav>li>a, .nav-header-color .navbar-header>a{
+    color: black;
+    }
+    .navbar-collapse .navbar-nav>li>a:hover{
+        color: red;
+    }
+   .imgi{
+        width: 80px;
+    }
+/*    .special-img 
+    {
+        position: relative;
+        top: -5px;
+        float: left;
+        left: -5px;
+    }*/
+    .left-sidebar{
+        text-align: center;
+        border-right: 1px solid grey;
+        /*position: fixed; */
+        /*top: 300;*/
+    }
+   input[type=file] {
+    display: inline;
+}
+
+   </style>
 </head>
 <body>
-	<nav class="navbar navbar-inverse">
+	<nav class="navbar navbar-inverse center-block">
     	<div class="container-fluid nav-header-color">
             <div class="navbar-header">
             	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -52,6 +91,12 @@
             
             <ul class="nav navbar-nav navbar-right">
                 <!-- <form> -->
+              <!--   <li>
+                    <a >
+                       <!--  <img src="images/whitewalker.jpg" class="img-circle col-md-5 col-sm-5" alt="Cinque Terre"> -->
+                     <!--   <img src="http://placehold.it/50x50" class="profile-image special-img img-circle"> </a>
+                    <!-- </a> -->
+                <!-- </li> --> 
             	<li><a href="profile.php">Hi, 
                 <?php 
                 require 'login.php';
@@ -67,7 +112,7 @@
       	</div>  <!-- container-fluid -->
     </nav>
     <div id="myModal" class="modal fade" role="dialog">
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-sm">
 
         <!-- Modal content-->
         <div class="modal-content">
@@ -88,28 +133,112 @@
 
       </div>
     </div>
-    <div class="container">
+    <div class="container center-block">
         <div class="row">
-            <div class="col-md-2 col-sm-2"></div>
+            <div class="left-sidebar col-md-2 col-sm-2">
+               <!--  <button type="button" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-upload"></span> Upload
+                 </button> -->
+                 <img src="images/whitewalker.jpg" class="imgi img-circle" alt="Cinque Terre"><br>
+                 <a href="#">
+                     <h3><?php echo $_SESSION['fullname']; ?></h3>
+                     <h4>(<?php echo $_SESSION['username'];?>)</h4>
+                 </a>
+                 <span>1000 Post</span>
+                 <span>1000 Followers</span>
+                 <span>1000 Following</span>
+                 <br>
+                  <br>
+                   <br>
+                    <br>
+                     <br>
+                      <br>
+                       <br>
+                        <br>
+                         <br>
+                          <br>
+
+                           <br>
+                            <br>
+                             <br>
+                              <br>
+                               <br>
+                                <br> <br> <br>
+                                 <br>
+                                  <br>
+
+                                   <br>
+                                    <br>
+                                     <br>
+                                      <br>
+                                       <br>
+                                        <br>
+
+
+            </div>
             <div class="col-md-8 col-sm-8">
                 <hr>
+                <div class="container" style="height: 2000px;">
+                    <?php display_content(); ?>
+                </div>
             </div>
         </div>
     </div>
-</body>
+    
+    <!-- <div class="container" style="position: fixed; bottom: 0;"> -->
+        <div class="container center-block container-fix-footer" style="position: fixed;bottom: 0;">
+            <div class="row center-block">
+                <div class="col-md-2 col-sm-2">
+                  <!--   <a href="google.com"><button type="button" class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-home"></span> Home
+                        </button></a> -->
+                </div>
+                <div class=" col-md-8 col-sm-8">
+                <hr>
+                    <div class="center-block col-md-4 col-sm-4 foot">
+                        <a href="index.php"><button type="button" class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-home"></span> Home
+                        </button></a>
+                      <!--   <form action="upload.php" method="POST" enctype="multipart/form-data">
+                            <input type="file" name="fileToUpload" id="fileToUpload">
+                            <input type="submit" value="Upload Image" name="submit11">
+                        </form> -->
+                    </div>
+                    <div class="col-md-4 col-sm-4 foot">
+                        <a href="form.php">
+                            <button type="button" class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-upload"></span> Upload
+                            </button> 
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-4 foot">
+                        <button type="button" class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-globe"></span> Notifications
+                        </button>   
+                    </div>
+                </div>
+               <!--  <div class="col-md-4 col-sm-4">
+                    <h1>Notifications</h1>
+                </div> -->
+            </div>
+        </div>
+    <!-- </div> -->
 <script type="text/javascript">
-	$("#log-in-a").click(function(){
-		$("#log-in-div").show();
-		$("#sign-up-h5").show();
-		$("#sign-up-div").hide();
-		$("#log-in-h5").hide();
-	});
-	$("#sign-up-a").click(function(){
-		$("#sign-up-div").show();
-		$("#log-in-h5").show();
-		$("#log-in-div").hide();
-		$("#sign-up-h5").hide();
-	});
+    function filePreview(input){
+        if(input.files && input.files[0]){
+            var reader = new FileReader();
+            reader.onload = function(e){
+                $('#uploadform + img').remove();
+                $('#uploadform').after('<img src="'+e.target.result+'" width="450" height="300"/>');
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    $('#fileToUpload').change(function(){
+        filePreview(this);
+    });
 </script>
+</body>
+
 </html>
 

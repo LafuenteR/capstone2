@@ -82,7 +82,7 @@
 		    				<input class="form-control btn btn-info" type="submit" name="login" value="Log In"><br><br>
 		    			</form>
 	    			</div>
-	    			<div id="sign-up-h5" class="sign-log-border container-fluid">
+	    			<div id="sign-up-h5" class=" sign-log-border container-fluid">
 	    			<!-- <form > -->
 	    				<h5>Don't have an account? <a id="sign-up-a" href="#">Sign Up</a></h5>
 	    			<!-- </form> -->

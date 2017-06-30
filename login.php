@@ -19,6 +19,7 @@
  			$_SESSION['fullname'] = $fullname;
  			$_SESSION['password'] = $password;
  			$_SESSION['id'] = $iddd;
+ 			$_SESSION['fullname'] = $fullname;
  			header('location:loginhome.php');
  			// $_SESSION['role'] = $role;
 
